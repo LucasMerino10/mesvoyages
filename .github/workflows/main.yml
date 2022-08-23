@@ -5,7 +5,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Get lastest code
+      - name: Get latest code
       - uses: actions/checkout@v2
 
       - name: Sync files
