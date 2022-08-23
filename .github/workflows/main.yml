@@ -1,0 +1,22 @@
+on: push
+name: Deploy website on push
+jobs:
+
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get lastest code
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Sync files
+        uses: SamKirlkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ftp.mesvoyages-sio.go.yj.fr
+          server-dir: /public_html/mesvoyages/
+          username: ctaeebfd
+          password: ${{ secrets.ftp_password }}
+
+
