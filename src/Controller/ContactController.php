@@ -48,7 +48,7 @@ class ContactController extends AbstractController {
     public function sendMail(MailerInterface $mailer, Contact $contact) {
         $email = (new Email())
                 ->from($contact->getEmail())
-                ->to('contact@mesvoyages.com')
+                ->to('mesvoyagescontact@gmail.com')
                 ->subject('Message du site de voyages')
                 ->html($this->renderView(
                         'pages/_email.html.twig', [

@@ -85,7 +85,7 @@ class Visite {
      * 
      * @var string|null 
      */
-    private ?string $imageName = null;
+    private $imageName = null;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
